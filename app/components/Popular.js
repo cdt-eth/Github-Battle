@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import api from '../utils/api';
+import Loading from './Loading';
 
 // -------------------------------
 // Stateless Functional Component
@@ -95,7 +96,7 @@ class Popular extends React.Component {
     return (
       <div>
         <SelectLanguage selectedLanguage={this.state.selectedLanguage} onSelect={this.updateLangauge} />
-        {!this.state.repos ? <p>LOADING...</p> : <RepoGrid repos={this.state.repos} />}
+        {!this.state.repos ? <Loading /> : <RepoGrid repos={this.state.repos} />}
       </div>
     );
   }
