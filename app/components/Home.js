@@ -20,7 +20,7 @@ class Home extends React.Component {
         </h1>
         <h3>Input any 2 Github usernames to compare stats and see who comes out on top!</h3>
 
-        <Link className="button" to="/battle">
+        <Link className="homeButton" to="/battle">
           Battle
         </Link>
       </div>
