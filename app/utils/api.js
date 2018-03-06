@@ -5,7 +5,7 @@ var sec = '19fad15b9f666d4c715d76d46b8e6d344d4fedb7';
 var params = '?client_id' + id + '&client_secret=' + sec;
 
 function getProfile(username) {
-  return axios.get('https://api.github.com/users/' + username + params).then(function(users) {
+  return axios.get('https://api.github.com/users/' + username + params).then(function(user) {
     return user.data;
   });
 }
