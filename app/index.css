@@ -40,7 +40,6 @@ body {
     justify-content: center;
     text-align: center;
     padding: 30px;
-    background-color: rgba(0, 0, 0, 0.4);
   }
 }
 
@@ -280,6 +279,7 @@ h3 {
   .home-container h1 {
     font-size: 40px;
     width: 85%;
+    font-weight: 300;
     margin-bottom: 0px;
   }
 }
