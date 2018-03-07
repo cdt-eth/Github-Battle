@@ -100,7 +100,8 @@ li {
 
 @media only screen and (max-width: 767px) {
   .popular-list {
-    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: repeat(2, 1fr); */
+    grid-template-columns: 1fr;
     margin: 0px;
   }
 }
