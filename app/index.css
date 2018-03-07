@@ -101,7 +101,7 @@ li {
 @media only screen and (max-width: 767px) {
   .popular-list {
     grid-template-columns: repeat(2, 1fr);
-    width: 100%;
+    margin: 0px;
   }
 }
 
@@ -113,6 +113,11 @@ h2 {
   margin: 10px;
   color: white;
   /* color: #35ba52; */
+}
+@media only screen and (max-width: 767px) {
+  .popular-item {
+    margin: 0 0 45px 0px !important;
+  }
 }
 
 .popular-item {
