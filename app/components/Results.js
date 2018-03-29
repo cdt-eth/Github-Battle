@@ -96,8 +96,10 @@ class Results extends React.Component {
     if (error) {
       return (
         <div>
-          <p>{error}</p>
-          <Link to="/battle">Reset</Link>
+          <p style={{ color: 'white', textAlign: 'center', fontSize: '22px' }}>{error}</p>
+          <Link to="/battle" className="button">
+            Reset
+          </Link>
         </div>
       );
     }
