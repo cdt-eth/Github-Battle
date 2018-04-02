@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 var styles = {
@@ -9,7 +9,7 @@ var styles = {
   }
 };
 
-class Loading extends React.Component {
+class Loading extends Component {
   constructor(props) {
     super(props);
 

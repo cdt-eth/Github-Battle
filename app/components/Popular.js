@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import api from '../utils/api';
 import Loading from './Loading';
@@ -64,7 +64,7 @@ SelectLanguage.propTypes = {
   onSelect: PropTypes.func.isRequired
 };
 
-class Popular extends React.Component {
+class Popular extends Component {
   constructor(props) {
     super(props);
 
@@ -99,10 +99,10 @@ class Popular extends React.Component {
 
   render() {
     return (
-      <div>
+      <Fragment>
         <SelectLanguage selectedLanguage={this.state.selectedLanguage} onSelect={this.updateLangauge} />
         {!this.state.repos ? <Loading /> : <RepoGrid repos={this.state.repos} />}
-      </div>
+      </Fragment>
     );
   }
 }

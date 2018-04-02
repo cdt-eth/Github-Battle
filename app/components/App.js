@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Popular from './Popular';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
@@ -8,7 +8,7 @@ import Home from './Home';
 import Battle from './Battle';
 import Results from './Results';
 
-class App extends React.Component {
+class App extends Component {
   render() {
     return (
       <Router>

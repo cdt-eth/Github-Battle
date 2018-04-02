@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component, Fragment } from 'react';
 import queryString from 'query-string';
 import api from '../utils/api';
 import { Link } from 'react-router-dom';
@@ -36,7 +36,7 @@ function Player(props) {
   return (
     <div>
       <h1 className="header">{props.label}</h1>
-      <h3 style={{ textAlign: 'center' }}>Score: {props.score}</h3>
+      <h3>Score: {props.score}</h3>
       <Profile info={props.profile} />
     </div>
   );
@@ -48,7 +48,7 @@ Player.propTypes = {
   profile: PropTypes.object.isRequired
 };
 
-class Results extends React.Component {
+class Results extends Component {
   constructor(props) {
     super(props);
     this.state = {

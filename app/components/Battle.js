@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import PlayerPreview from './PlayerPreview';
 
-class PlayerInput extends React.Component {
+class PlayerInput extends Component {
   constructor(props) {
     super(props);
 
@@ -64,7 +64,7 @@ PlayerInput.defaultProps = {
   label: 'Username'
 };
 
-class Battle extends React.Component {
+class Battle extends Component {
   constructor(props) {
     super(props);
 
@@ -105,7 +105,7 @@ class Battle extends React.Component {
     var playerTwoImage = this.state.playerTwoImage;
 
     return (
-      <div>
+      <Fragment>
         <div className="row">
           {!playerOneName && <PlayerInput id="playerOne" label="Player One" onSubmit={this.handleSubmit} />}
 
@@ -140,7 +140,7 @@ class Battle extends React.Component {
               Battle
             </Link>
           )}
-      </div>
+      </Fragment>
     );
   }
 }
