@@ -44,6 +44,7 @@ class PlayerInput extends Component {
           autoComplete="off"
           value={this.state.username}
           onChange={this.handleChange}
+          ref={this.props.inputRef}
         />
         <button className="button" type="submit" disabled={!this.state.username}>
           {' '}
@@ -75,6 +76,9 @@ class Battle extends Component {
       playerTwoImage: null
     };
 
+    this.playerOneInput = null;
+    this.playerTwoInput = null;
+
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleReset = this.handleReset.bind(this);
   }
@@ -86,6 +90,7 @@ class Battle extends Component {
       newState[id + 'Image'] = 'https://github.com/' + username + '.png?size=200';
       return newState;
     });
+    this.playerTwoInput.focus();
   }
 
   handleReset(id) {
@@ -107,7 +112,16 @@ class Battle extends Component {
     return (
       <Fragment>
         <div className="row">
-          {!playerOneName && <PlayerInput id="playerOne" label="Player One" onSubmit={this.handleSubmit} />}
+          {!playerOneName && (
+            <PlayerInput
+              inputRef={input => {
+                this.playerOneInput = input;
+              }}
+              id="playerOne"
+              label="Player One"
+              onSubmit={this.handleSubmit}
+            />
+          )}
 
           {playerOneImage !== null && (
             <PlayerPreview avatar={playerOneImage} username={playerOneName}>
@@ -117,7 +131,16 @@ class Battle extends Component {
             </PlayerPreview>
           )}
 
-          {!playerTwoName && <PlayerInput id="playerTwo" label="Player Two" onSubmit={this.handleSubmit} />}
+          {!playerTwoName && (
+            <PlayerInput
+              inputRef={input => {
+                this.playerTwoInput = input;
+              }}
+              id="playerTwo"
+              label="Player Two"
+              onSubmit={this.handleSubmit}
+            />
+          )}
 
           {playerTwoImage !== null && (
             <PlayerPreview avatar={playerTwoImage} username={playerTwoName}>
