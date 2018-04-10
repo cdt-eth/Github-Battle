@@ -82,6 +82,9 @@ class Battle extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleReset = this.handleReset.bind(this);
   }
+  componentDidMount() {
+    this.playerOneInput.focus();
+  }
 
   handleSubmit(id, username) {
     this.setState(function() {
