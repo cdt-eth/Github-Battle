@@ -21,7 +21,33 @@ class App extends Component {
             <Route path="/popular" component={Popular} />
             <Route
               render={function() {
-                return <p>Not Found</p>;
+                return (
+                  <p
+                    style={{
+                      color: 'white',
+                      'margin-top': '20',
+                      'text-align': 'center',
+                      'font-size': '50px',
+                      'font-family': 'sans-serif',
+                      'font-weight': '300'
+                    }}
+                  >
+                    Not Found
+                    <br />
+                    <span
+                      style={{
+                        color: 'white',
+                        'text-align': 'center',
+                        'font-size': '25px',
+                        'font-style': 'italic',
+                        'font-family': 'sans-serif',
+                        'font-weight': '500'
+                      }}
+                    >
+                      please go back and try again
+                    </span>
+                  </p>
+                );
               }}
             />
           </Switch>
