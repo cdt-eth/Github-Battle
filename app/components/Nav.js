@@ -1,6 +1,14 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+/**
+ * ___Navigation Bar___
+ *
+ * NavLink used over Link for styling capability
+ *
+ * Active/current page is colored
+ */
+
 function Nav() {
   return (
     <ul className="nav">
@@ -9,11 +17,13 @@ function Nav() {
           Home
         </NavLink>
       </li>
+
       <li>
         <NavLink activeClassName="active" to="/battle">
           Battle
         </NavLink>
       </li>
+
       <li>
         <NavLink activeClassName="active" to="/popular">
           Popular
