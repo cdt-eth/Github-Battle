@@ -8,6 +8,14 @@ import Home from './Home';
 import Battle from './Battle';
 import Results from './Results';
 
+/**
+ * ___Main Component___
+ *
+ * Routing set up & Switch used to render exact path "/" exclusively
+ *
+ * Named imports used to drop "React" from "React.Component"
+ */
+
 class App extends Component {
   render() {
     return (
@@ -20,9 +28,11 @@ class App extends Component {
             <Route path="/battle/results" component={Results} />
             <Route path="/popular" component={Popular} />
             <Route
+              // Routing error page
               render={function() {
                 return (
                   <p
+                    // experimenting with inline styles
                     style={{
                       color: 'white',
                       'margin-top': '20',
