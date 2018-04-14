@@ -1,5 +1,13 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+
+/**
+ * ___Player Preview___
+ *
+ * The UI shown when the username is successfully entered
+ *
+ * All info taken from their profiles using the Github API
+ */
 
 function PlayerPreview(props) {
   return (
@@ -13,6 +21,7 @@ function PlayerPreview(props) {
   );
 }
 
+// Typechecking
 PlayerPreview.propTypes = {
   avatar: PropTypes.string.isRequired,
   username: PropTypes.string.isRequired
