@@ -68,7 +68,41 @@ describe('Github Battle', function() {
       .click();
   });
 
-  // Load one user unsuccessfully & one successfully
+  // Load left user successfully & right user unsuccessfully
+  it('Inputs user 1', function() {
+    cy
+      .get('input:first')
+      .type('christiandavidturner')
+      .should('have.value', 'christiandavidturner');
+  });
+  it('Submits user 1', function() {
+    cy.get(':nth-child(1) > .button').click();
+  });
+  it('Inputs user 2', function() {
+    cy
+      .get('#username')
+      .type('reallyfakeusername')
+      .should('have.value', 'reallyfakeusername');
+  });
+  it('Submits user 2', function() {
+    cy.get(':nth-child(2) > .button').click();
+  });
+  // Initiate battle once both users are present
+  it('Clicks battle button', function() {
+    cy
+      .get('.button')
+      .contains('Battle')
+      .click();
+  });
+  // Reset Battle
+  it('Clicks reset button', function() {
+    cy
+      .get('.button')
+      .contains('Reset')
+      .click();
+  });
+
+  // Load left user unsuccessfully & right user successfully
   it('Inputs user 1', function() {
     cy
       .get('input:first')
