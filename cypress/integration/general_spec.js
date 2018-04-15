@@ -34,6 +34,74 @@ describe('Github Battle', function() {
     cy.url('http://localhost:8080/battle');
   });
 
+  // Load both users unsuccessfully
+  it('Inputs user 1', function() {
+    cy
+      .get('input:first')
+      .type('reallyfakeusername')
+      .should('have.value', 'reallyfakeusername');
+  });
+  it('Submits user 1', function() {
+    cy.get(':nth-child(1) > .button').click();
+  });
+  it('Inputs user 2', function() {
+    cy
+      .get('#username')
+      .type('anotherfakeusername')
+      .should('have.value', 'anotherfakeusername');
+  });
+  it('Submits user 2', function() {
+    cy.get(':nth-child(2) > .button').click();
+  });
+  // Initiate battle once both users are present
+  it('Clicks battle button', function() {
+    cy
+      .get('.button')
+      .contains('Battle')
+      .click();
+  });
+  // Reset Battle
+  it('Clicks reset button', function() {
+    cy
+      .get('.button')
+      .contains('Reset')
+      .click();
+  });
+
+  // Load one user unsuccessfully & one successfully
+  it('Inputs user 1', function() {
+    cy
+      .get('input:first')
+      .type('reallyfakeusername')
+      .should('have.value', 'reallyfakeusername');
+  });
+  it('Submits user 1', function() {
+    cy.get(':nth-child(1) > .button').click();
+  });
+  it('Inputs user 2', function() {
+    cy
+      .get('#username')
+      .type('christiandavidturner')
+      .should('have.value', 'christiandavidturner');
+  });
+  it('Submits user 2', function() {
+    cy.get(':nth-child(2) > .button').click();
+  });
+  // Initiate battle once both users are present
+  it('Clicks battle button', function() {
+    cy
+      .get('.button')
+      .contains('Battle')
+      .click();
+  });
+  // Reset Battle
+  it('Clicks reset button', function() {
+    cy
+      .get('.button')
+      .contains('Reset')
+      .click();
+  });
+
   // Load both users successfully
   it('Inputs user 1', function() {
     cy
@@ -53,7 +121,6 @@ describe('Github Battle', function() {
   it('Submits user 2', function() {
     cy.get(':nth-child(2) > .button').click();
   });
-
   // Initiate battle once both users are present
   it('Clicks battle button', function() {
     cy
