@@ -3,6 +3,12 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import PlayerPreview from './PlayerPreview';
 
+/**
+ * ___Battle Page___
+ *
+ *
+ */
+
 class PlayerInput extends Component {
   constructor(props) {
     super(props);
@@ -55,16 +61,21 @@ class PlayerInput extends Component {
   }
 }
 
+// Typechecking
 PlayerInput.propTypes = {
   id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   onSubmit: PropTypes.func.isRequired
 };
-
 PlayerInput.defaultProps = {
   label: 'Username'
 };
 
+// ___Inputting Users___
+// to update Parent state we pass children the onSubmit function
+// function receives state (username:'')
+// later invoked (onSubmit) with child state (new username we input)
+// which then updates parent state
 class Battle extends Component {
   constructor(props) {
     super(props);
@@ -79,13 +90,18 @@ class Battle extends Component {
     this.playerOneInput = null;
     this.playerTwoInput = null;
 
+    // ensures 'this' is linked to this component
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleReset = this.handleReset.bind(this);
   }
+
+  // input 1 focus set once mounted
   componentDidMount() {
     this.playerOneInput.focus();
   }
 
+  // id = p1 or p2
+  // username is value of input
   handleSubmit(id, username) {
     this.setState(function() {
       var newState = {};
@@ -93,6 +109,7 @@ class Battle extends Component {
       newState[id + 'Image'] = 'https://github.com/' + username + '.png?size=200';
       return newState;
     });
+    // onSubmit it shifts focus to input 2
     this.playerTwoInput.focus();
   }
 
@@ -113,6 +130,7 @@ class Battle extends Component {
     var playerTwoImage = this.state.playerTwoImage;
 
     return (
+      // React Fragments replaces unnecessary DOM nodes (wrapper <div>)
       <Fragment>
         <div className="row">
           {!playerOneName && (
@@ -154,6 +172,7 @@ class Battle extends Component {
           )}
         </div>
 
+        {/* Once we have both usernames */}
         {playerOneImage &&
           playerTwoImage && (
             <Link
