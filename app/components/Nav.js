@@ -29,6 +29,13 @@ function Nav() {
           Popular
         </NavLink>
       </li>
+      <p className="homeCredit">
+        checkout out the project
+        <a className="homeHere" href="https://github.com/christiandavidturner/github-battle-react" target="_blank">
+          {' '}
+          on Github
+        </a>
+      </p>
     </ul>
   );
 }

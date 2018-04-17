@@ -33,6 +33,14 @@ class Home extends Component {
         <Link className="homeButton" to="/battle">
           Battle
         </Link>
+
+        {/* <p className="homeCredit">
+          checkout out the project
+          <a className="homeHere" href="https://github.com/christiandavidturner/github-battle-react" target="_blank">
+            {' '}
+            on Github
+          </a>
+        </p> */}
       </div>
     );
   }
