@@ -5,8 +5,8 @@ import { NavLink } from 'react-router-dom';
  * ___Navigation Bar___
  *
  * NavLink used over Link for styling capability
- *
- * Active/current page is colored
+ *  • now have access to activeClassName property
+ *  • active/current page is colored
  */
 
 function Nav() {
