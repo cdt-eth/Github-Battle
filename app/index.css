@@ -158,6 +158,9 @@ h2 {
 @media only screen and (max-width: 767px) {
   .space-list-items {
     margin: 0px 20px;
+    width: auto;
+    padding: 0px;
+    text-align: center;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -186,7 +189,7 @@ a {
 @media only screen and (max-width: 767px) {
   .row {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-gap: 15px;
   }
 }
