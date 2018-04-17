@@ -6,7 +6,13 @@ import PlayerPreview from './PlayerPreview';
 /**
  * ___Battle Page___
  *
- *
+ * Battle
+ *  • two empty player inputs (<PlayerInput />) are rendered
+ *  • when user types in any input onChange runs updating state then username value
+ *  • when user hits submits, handleSubmit, in <PlayerInput />, is called
+ *  • it passes id & username via this.props.onSubmit
+ *  • which runs handleSubmit in <Battle />, giving it that id & username
+ *  • values are passed and state is updated
  */
 
 class PlayerInput extends Component {
@@ -21,9 +27,9 @@ class PlayerInput extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  // input value becomes username
   handleChange(event) {
     var value = event.target.value;
-
     this.setState(function() {
       return {
         username: value
@@ -32,8 +38,8 @@ class PlayerInput extends Component {
   }
 
   handleSubmit(event) {
+    // prevents submitting to a server
     event.preventDefault();
-
     this.props.onSubmit(this.props.id, this.state.username);
   }
 
@@ -113,6 +119,7 @@ class Battle extends Component {
     this.playerTwoInput.focus();
   }
 
+  // resets state back to original form
   handleReset(id) {
     this.setState(function() {
       var newState = {};
@@ -135,12 +142,12 @@ class Battle extends Component {
         <div className="row">
           {!playerOneName && (
             <PlayerInput
-              inputRef={input => {
-                this.playerOneInput = input;
-              }}
               id="playerOne"
               label="Player One"
               onSubmit={this.handleSubmit}
+              inputRef={input => {
+                this.playerOneInput = input;
+              }}
             />
           )}
 
@@ -154,12 +161,12 @@ class Battle extends Component {
 
           {!playerTwoName && (
             <PlayerInput
-              inputRef={input => {
-                this.playerTwoInput = input;
-              }}
               id="playerTwo"
               label="Player Two"
               onSubmit={this.handleSubmit}
+              inputRef={input => {
+                this.playerTwoInput = input;
+              }}
             />
           )}
 
@@ -177,6 +184,7 @@ class Battle extends Component {
           playerTwoImage && (
             <Link
               className="button"
+              // appending more params to match's dynamic url property
               to={{
                 pathname: match.url + '/results',
                 search: '?playerOneName=' + playerOneName + '&playerTwoName=' + playerTwoName
