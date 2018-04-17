@@ -10,14 +10,12 @@ body {
 }
 
 .container {
-  /* max-width: 1200px; */
   background: #2b3137;
   margin: 0 auto;
 }
 
 .nav {
   display: flex;
-  /* background-color: #25292e; */
   background-color: rgba(0, 0, 0, 0.3);
   padding: 30px;
   border-bottom: #97999d 2px solid;
@@ -91,16 +89,12 @@ li {
 }
 
 .popular-list {
-  /* display: flex;
-  flex-wrap: wrap; */
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   justify-content: space-around;
 }
-
 @media only screen and (max-width: 767px) {
   .popular-list {
-    /* grid-template-columns: repeat(2, 1fr); */
     grid-template-columns: 1fr;
     margin: 0px;
   }
@@ -113,7 +107,6 @@ h2 {
   font-size: 20px;
   margin: 10px;
   color: white;
-  /* color: #35ba52; */
 }
 @media only screen and (max-width: 767px) {
   .popular-item {
@@ -144,10 +137,20 @@ h2 {
   cursor: pointer;
 }
 
-.space-list-items {
+.result-items {
   margin-bottom: 15px;
   width: 250px;
   padding-left: 90px;
+}
+.result-items li {
+  color: white;
+}
+.result-items li a {
+  font-size: 16px;
+}
+
+.space-list-items {
+  margin-bottom: 7px;
 }
 .space-list-items li {
   color: white;
@@ -248,7 +251,6 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* background-color: #2c3137; */
   background-color: rgba(0, 0, 0, 0.2);
   background-image: url('./components/images/circuit-inactive copy.png');
   background-size: cover;
@@ -373,10 +375,8 @@ h3 {
   background: transparent;
   color: #35ba52;
   display: block;
-
   font-size: 15px;
   text-align: center;
-  /* border: 3px solid #35ba52; */
   text-decoration: underline #35ba52;
   width: fit-content;
   padding: 10px;
