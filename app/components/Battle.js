@@ -153,6 +153,7 @@ class Battle extends Component {
 
           {playerOneImage !== null && (
             <PlayerPreview avatar={playerOneImage} username={playerOneName}>
+              {/* children UI */}
               <button className="reset" onClick={this.handleReset.bind(this, 'playerOne')}>
                 Reset
               </button>
@@ -172,6 +173,7 @@ class Battle extends Component {
 
           {playerTwoImage !== null && (
             <PlayerPreview avatar={playerTwoImage} username={playerTwoName}>
+              {/* children UI */}
               <button className="reset" onClick={this.handleReset.bind(this, 'playerTwo')}>
                 Reset
               </button>
