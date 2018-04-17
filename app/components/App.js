@@ -23,6 +23,7 @@ class App extends Component {
         <div className="container">
           <Nav />
           <Switch>
+            {/* exact used so battle componenet isn't rendered on results page */}
             <Route exact path="/" component={Home} />
             <Route exact path="/battle" component={Battle} />
             <Route path="/battle/results" component={Results} />
