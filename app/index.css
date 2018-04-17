@@ -323,6 +323,13 @@ h3 {
   padding: 7px 0;
   margin: 10px auto;
 }
+@media only screen and (max-width: 767px) {
+  .button {
+    font-size: 14px;
+    width: 70px;
+  }
+}
+
 .battleAgain {
   color: #fff;
   background: #35ba52;
@@ -336,9 +343,8 @@ h3 {
   margin: 35px auto;
 }
 @media only screen and (max-width: 767px) {
-  .button {
-    font-size: 14px;
-    width: 70px;
+  .battleAgain {
+    margin-bottom: 45px;
   }
 }
 
