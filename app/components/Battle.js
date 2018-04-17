@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
-import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import PlayerPreview from './PlayerPreview';
 
 /**
@@ -9,7 +9,7 @@ import PlayerPreview from './PlayerPreview';
  * Battle
  *  • two empty player inputs (<PlayerInput />) are rendered
  *  • when user types in any input onChange runs updating state then username value
- *  • when user hits submits, handleSubmit, in <PlayerInput />, is called
+ *  • when user hits submit, handleSubmit(in <PlayerInput />), is called
  *  • it passes id & username via this.props.onSubmit
  *  • which runs handleSubmit in <Battle />, giving it that id & username
  *  • values are passed and state is updated
@@ -78,10 +78,10 @@ PlayerInput.defaultProps = {
 };
 
 // ___Inputting Users___
-// to update Parent state we pass children the onSubmit function
-// function receives state (username:'')
-// later invoked (onSubmit) with child state (new username we input)
-// which then updates parent state
+// 1. to update Parent state we pass children the onSubmit function
+// 2. function receives state (username:'')
+// 3. later invoked (onSubmit) with child state (new username we input)
+// 4. which then updates parent state
 class Battle extends Component {
   constructor(props) {
     super(props);
