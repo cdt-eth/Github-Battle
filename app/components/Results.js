@@ -28,6 +28,7 @@ function Profile(props) {
   );
 }
 
+// Typechecking
 Profile.propTypes = {
   info: PropTypes.object.isRequired
 };
@@ -42,6 +43,7 @@ function Player(props) {
   );
 }
 
+// Typechecking
 Player.propTypes = {
   label: PropTypes.string.isRequired,
   score: PropTypes.number.isRequired,
@@ -95,20 +97,27 @@ class Results extends Component {
 
     if (error) {
       return (
-        <div>
+        // React Fragments replaces unnecessary DOM nodes
+        <Fragment>
           <p style={{ color: 'white', textAlign: 'center', fontSize: '22px' }}>{error}</p>
           <Link to="/battle" className="button">
             Reset
           </Link>
-        </div>
+        </Fragment>
       );
     }
 
     return (
-      <div className="row">
-        <Player label="Winner" score={winner.score} profile={winner.profile} />
-        <Player label="Loser" score={loser.score} profile={loser.profile} />
-      </div>
+      <Fragment>
+        <div className="row">
+          <Player label="Winner" score={winner.score} profile={winner.profile} />
+          <Player label="Loser" score={loser.score} profile={loser.profile} />
+        </div>
+        <Link to="/battle" className="battleAgain">
+          {' '}
+          Battle again{' '}
+        </Link>
+      </Fragment>
     );
   }
 }
