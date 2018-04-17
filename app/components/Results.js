@@ -12,6 +12,7 @@ import Loading from './Loading';
  * display winner, loser, and score breakdown
  */
 
+// renders the <PlayerPreview />
 function Profile(props) {
   var info = props.info;
 
@@ -22,6 +23,7 @@ function Profile(props) {
         {info.name && <li>{info.name}</li>}
         {info.location && <li>{info.location}</li>}
         {info.company && <li>{info.company}</li>}
+        {/* top 3 aren't required, bottom 3 are, except blog */}
         <li>Followers: {info.followers}</li>
         <li>Following: {info.following}</li>
         <li>Public Repos: {info.public_repos}</li>
