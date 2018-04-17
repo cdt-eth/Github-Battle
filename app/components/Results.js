@@ -6,11 +6,18 @@ import PropTypes from 'prop-types';
 import PlayerPreview from './PlayerPreview';
 import Loading from './Loading';
 
+/**
+ * ___Results Page___
+ *
+ * display winner, loser, and score breakdown
+ */
+
 function Profile(props) {
   var info = props.info;
 
   return (
     <PlayerPreview username={info.login} avatar={info.avatar_url}>
+      {/* children UI */}
       <ul className="space-list-items">
         {info.name && <li>{info.name}</li>}
         {info.location && <li>{info.location}</li>}
@@ -33,6 +40,7 @@ Profile.propTypes = {
   info: PropTypes.object.isRequired
 };
 
+// UI for each player column
 function Player(props) {
   return (
     <div>
@@ -60,9 +68,11 @@ class Results extends Component {
       loading: true
     };
   }
+  // parses query to access players
   componentDidMount() {
     var players = queryString.parse(this.props.location.search);
 
+    // the actual battle function call where actual user data goes in
     api.battle([players.playerOneName, players.playerTwoName]).then(
       function(players) {
         if (players === null) {
@@ -74,6 +84,8 @@ class Results extends Component {
           });
         }
 
+        // if no error re-render is called to update state and UI
+        // we now have players and no loading
         this.setState(function() {
           return {
             error: null,
@@ -108,6 +120,7 @@ class Results extends Component {
     }
 
     return (
+      // final results UI
       <Fragment>
         <div className="row">
           <Player label="Winner" score={winner.score} profile={winner.profile} />

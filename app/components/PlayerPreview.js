@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
  *
  * The UI shown when the username is successfully entered
  *
- * All info taken from their profiles using the Github API
+ * used differently in <Battle /> than in <Results />
  */
 
 function PlayerPreview(props) {
@@ -16,6 +16,7 @@ function PlayerPreview(props) {
         <img className="avatar" src={props.avatar} alt={'Avatar for ' + props.username} style={{ color: 'white' }} />
         <h2 className="username">@{props.username}</h2>
       </div>
+      {/* used in two places with unique UI */}
       {props.children}
     </div>
   );

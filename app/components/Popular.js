@@ -3,9 +3,16 @@ import PropTypes from 'prop-types';
 import api from '../utils/api';
 import Loading from './Loading';
 
-// -------------------------------
-// Stateless Functional Component
-// -------------------------------
+/**
+ * ___Popular Page___
+ *
+ * Ajax request made in CDM
+ *  • that’s where we “get” the repos
+ *  • also where we change the selected language
+ *  • refetches every we hit updateLanguaage
+ *
+ */
+
 function SelectLanguage(props) {
   var languages = ['All', 'JavaScript', 'Ruby', 'Java', 'CSS', 'Python'];
 
@@ -14,6 +21,7 @@ function SelectLanguage(props) {
       {languages.map(lang => {
         return (
           <li
+            // selected language is colored
             style={lang === props.selectedLanguage ? { color: '#35ba52' } : null}
             onClick={props.onSelect.bind(null, lang)}
             key={lang}
@@ -55,10 +63,10 @@ function RepoGrid(props) {
   );
 }
 
+// Typechecking
 RepoGrid.propTypes = {
   repos: PropTypes.array.isRequired
 };
-
 SelectLanguage.propTypes = {
   selectedLanguage: PropTypes.string.isRequired,
   onSelect: PropTypes.func.isRequired
@@ -99,6 +107,7 @@ class Popular extends Component {
 
   render() {
     return (
+      // React Fragments replaces unnecessary DOM nodes
       <Fragment>
         <SelectLanguage selectedLanguage={this.state.selectedLanguage} onSelect={this.updateLangauge} />
         {!this.state.repos ? <Loading /> : <RepoGrid repos={this.state.repos} />}
