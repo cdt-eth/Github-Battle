@@ -11,10 +11,17 @@
 <hr />
 
 
-![update](https://img.shields.io/badge/Last%20update-April-blue.svg?style=plastic "update")
+![update](https://img.shields.io/badge/Last%20update-April-blue.svg?style=plastic "update") [![Cypress.io tests](https://img.shields.io/badge/cypress.io-tests-green.svg?style=flat-square)](https://cypress.io)
 
-[![GitHub followers](https://img.shields.io/github/followers/christiandavidturner.svg?style=social&label=Follow)](http://github.com/christiandavidturner)
-[![Twitter Follow](https://img.shields.io/twitter/follow/imcdt.svg?style=social&label=Follow)](https://twitter.com/imcdt)
+[![GitHub followers](https://img.shields.io/github/followers/christiandavidturner.svg?style=social&label=Follow)](http://github.com/christiandavidturner) [![Twitter Follow](https://img.shields.io/twitter/follow/imcdt.svg?style=social&label=Follow)](https://twitter.com/imcdt)
+
+## Table of Contents
+
+* [Overview](#overview)
+* [Tech Stack](#installation)
+* [Components](#usage)
+* [Testing](#documentation)
+* [Screenshots](#related-projects)
 
 
 # Overview
@@ -22,13 +29,24 @@
 React app where you input 2 Github users, compare stats, and see who comes out on top! Also, view the most popular repos from each language.
 ## You can see the final project [here](https://github-battle-react-4b568.firebaseapp.com/)
 
-# Used
-React (no create-react-app used), React Router, ES6, npm, Yarn, Webpack, Github API, Axios, Cypress, and Firebase
+
+# Tech Stack
+
+- React (no boilerplate)
+- React Router
+
+- npm
+- Yarn
+- Webpack
+- Github API
+- Axios
+- Cypress
+- Firebase
 
 
 # Components 
 
-This codebase was originally taken from the TodoMVC project starting
+I added code comments that delve deeper into the app's functionality.
 
 - < Home />
 - < Nav />
@@ -41,10 +59,14 @@ This codebase was originally taken from the TodoMVC project starting
 
 # Testing
 
-Cypress
+I used Cypress for end-to-end testing. This tests the natural flow a user would go through in the application. I also made sure to cover all error cases including both username and url input mistakes.
+
+![cypress](https://user-images.githubusercontent.com/26611339/38947731-aab2e854-430b-11e8-9c7a-6ed97e57915b.gif)
 
 
 # Screenshots
+
+Here are previews of the various features.
 
 <img width="50%" alt="screen shot 2018-03-28 at 11 48 29 am" src="https://user-images.githubusercontent.com/26611339/38042231-d77aca72-3281-11e8-9693-4ff303a92909.jpg"><img width="50%" alt="screen shot 2018-03-28 at 11 48 29 am" src="https://user-images.githubusercontent.com/26611339/38042287-f874b2d8-3281-11e8-9d8b-70917028764d.jpg">
 
