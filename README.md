@@ -13,8 +13,9 @@
 
 ![update](https://img.shields.io/badge/Last%20update-April-blue.svg?style=plastic "update")
 
-![GitHub followers](https://img.shields.io/github/followers/christiandavidturner.svg?style=social&label=Follow)
+[![GitHub followers](https://img.shields.io/github/followers/christiandavidturner.svg?style=social&label=Follow)](http://github.com/christiandavidturner)
 [![Twitter Follow](https://img.shields.io/twitter/follow/imcdt.svg?style=social&label=Follow)](https://twitter.com/imcdt)
+
 
 
 <img width="50%" alt="screen shot 2018-03-28 at 11 48 29 am" src="https://user-images.githubusercontent.com/26611339/38042231-d77aca72-3281-11e8-9693-4ff303a92909.jpg"><img width="50%" alt="screen shot 2018-03-28 at 11 48 29 am" src="https://user-images.githubusercontent.com/26611339/38042287-f874b2d8-3281-11e8-9d8b-70917028764d.jpg">
