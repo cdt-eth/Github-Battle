@@ -10,8 +10,10 @@
 
 <hr />
 
-![Update](https://img.shields.io/badge/Last%20update-April-blue.svg?style=plastic&link=false)
 
+![update](https://img.shields.io/badge/Last%20update-April-blue.svg?style=plastic "update")
+
+![GitHub followers](https://img.shields.io/github/followers/christiandavidturner.svg?style=social&label=Follow)
 [![Twitter Follow](https://img.shields.io/twitter/follow/imcdt.svg?style=social&label=Follow)](https://twitter.com/imcdt)
 
 
