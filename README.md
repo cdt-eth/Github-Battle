@@ -2,7 +2,7 @@
 <h1>Github Battle</h1>
 
 <a href="https://www.emojione.com/emoji/2694">
-<img height="80" width="80" alt="fight" src="https://user-images.githubusercontent.com/26611339/38938598-e62aeb60-42f3-11e8-96c8-697df52046e7.png" />
+<img height="80" width="80" alt="fight" src="https://user-images.githubusercontent.com/26611339/38950054-50c67066-4312-11e8-978e-3c92814d5ba3.png" />
 </a>
 
 <p> React app where you input 2 Github users, compare stats, and see who comes out on top! </p>
