@@ -14,7 +14,7 @@ import Loading from './Loading';
  */
 
 function SelectLanguage(props) {
-  var languages = ['All', 'JavaScript', 'Ruby', 'Java', 'CSS', 'Python'];
+  var languages = ['All', 'Javascript', 'Ruby', 'Java', 'CSS', 'Python'];
 
   return (
     <ul className="languages">
