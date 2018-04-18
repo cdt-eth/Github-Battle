@@ -11,23 +11,22 @@
 <hr />
 
 
-![update](https://img.shields.io/badge/Last%20update-April-blue.svg?style=plastic "update") [![Cypress.io tests](https://img.shields.io/badge/cypress.io-tests-green.svg?style=flat-square)](https://cypress.io)
+![update](https://img.shields.io/badge/Last%20update-April-blue.svg?style=plastic "update") [![Cypress.io tests](https://img.shields.io/badge/cypress.io-tests-green.svg?style=plastic)](https://cypress.io)
 
 [![GitHub followers](https://img.shields.io/github/followers/christiandavidturner.svg?style=social&label=Follow)](http://github.com/christiandavidturner) [![Twitter Follow](https://img.shields.io/twitter/follow/imcdt.svg?style=social&label=Follow)](https://twitter.com/imcdt)
 
 ## Table of Contents
 
 * [Overview](#overview)
-* [Tech Stack](#installation)
-* [Components](#usage)
-* [Testing](#documentation)
-* [Screenshots](#related-projects)
+* [Tech Stack](#tech-stack)
+* [Components](#components)
+* [Testing](#testing)
+* [Screenshots](#screenshots)
 
 
 # Overview
 
-React app where you input 2 Github users, compare stats, and see who comes out on top! Also, view the most popular repos from each language.
-## You can see the final project [here](https://github-battle-react-4b568.firebaseapp.com/)
+React app where you input 2 Github users, compare stats, and see who comes out on top! Also, view the most popular repos from each language. You can see the final project [here].(https://github-battle-react-4b568.firebaseapp.com/)
 
 
 # Tech Stack
