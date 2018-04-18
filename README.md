@@ -1,11 +1,24 @@
+<div align="center">
+<h1>Github Battle</h1>
 
-Github Battle
-========
+<a href="https://www.emojione.com/emoji/1f94a">
+<img height="80" width="80" alt="fight" src="https://user-images.githubusercontent.com/26611339/38938598-e62aeb60-42f3-11e8-96c8-697df52046e7.png" />
+</a>
+
+<p> React app where you input 2 Github users, compare stats, and see who comes out on top! </p>
+</div>
+
+<hr />
+
+![Update](https://img.shields.io/badge/Last%20update-April-blue.svg?style=plastic&link=false)
+
+[![Twitter Follow](https://img.shields.io/twitter/follow/imcdt.svg?style=social&label=Follow)](https://twitter.com/imcdt)
+
 
 <img width="50%" alt="screen shot 2018-03-28 at 11 48 29 am" src="https://user-images.githubusercontent.com/26611339/38042231-d77aca72-3281-11e8-9693-4ff303a92909.jpg"><img width="50%" alt="screen shot 2018-03-28 at 11 48 29 am" src="https://user-images.githubusercontent.com/26611339/38042287-f874b2d8-3281-11e8-9d8b-70917028764d.jpg">
 
 
-#### React app where you can input any 2 Github usernames to compare stats and see who comes out on top!
+
 Also, view the most popular repos from each language.
 <br/>
 
