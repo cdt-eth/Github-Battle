@@ -1,7 +1,7 @@
 <div align="center">
 <h1>Github Battle</h1>
 
-<a href="https://www.emojione.com/emoji/1f94a">
+<a href="https://www.emojione.com/emoji/2694">
 <img height="80" width="80" alt="fight" src="https://user-images.githubusercontent.com/26611339/38938598-e62aeb60-42f3-11e8-96c8-697df52046e7.png" />
 </a>
 
