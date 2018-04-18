@@ -26,7 +26,7 @@
 
 # Overview
 
-React app where you input 2 Github users, compare stats, and see who comes out on top! Also, view the most popular repos from each language. You can see the final project [here].(https://github-battle-react-4b568.firebaseapp.com/)
+React app where you input 2 Github users, compare stats, and see who comes out on top! Also, view the most popular repos from each language. You can see the final project [here](https://github-battle-react-4b568.firebaseapp.com/).
 
 
 # Tools
