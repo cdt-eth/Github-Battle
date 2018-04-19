@@ -18,7 +18,7 @@
 ## Table of Contents
 
 * [Overview](#overview)
-* [Tech Stack](#tools)
+* [Tools](#tools)
 * [Components](#components)
 * [Testing](#testing)
 * [Screenshots](#screenshots)
