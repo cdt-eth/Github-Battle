@@ -31,7 +31,11 @@ function Nav() {
       </li>
       <p className="homeCredit">
         checkout out the project
-        <a className="homeHere" href="https://github.com/christiandavidturner/github-battle-react" target="_blank">
+        <a
+          className="homeHere"
+          href="https://github.com/christiandavidturner/github-battle-react#github-battle"
+          target="_blank"
+        >
           {' '}
           on Github
         </a>
