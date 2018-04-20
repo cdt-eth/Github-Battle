@@ -1,10 +1,10 @@
 import React, { Component, Fragment } from 'react';
-import queryString from 'query-string';
-import api from '../utils/api';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import PlayerPreview from './PlayerPreview';
+import api from '../utils/api';
+import queryString from 'query-string';
 import Loading from './Loading';
+import PlayerPreview from './PlayerPreview';
 
 /**
  * ___Results Page___
@@ -19,7 +19,7 @@ function Profile(props) {
   return (
     <PlayerPreview username={info.login} avatar={info.avatar_url}>
       {/* children UI */}
-      <ul className="space-list-items">
+      <ul className="result-items">
         {info.name && <li>{info.name}</li>}
         {info.location && <li>{info.location}</li>}
         {info.company && <li>{info.company}</li>}
