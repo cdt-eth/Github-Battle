@@ -36,6 +36,7 @@ React app where you input 2 Github users, compare stats, and see who comes out o
 - npm
 - Yarn
 - Webpack
+- Prettier
 - Github API
 - Axios
 - Cypress
