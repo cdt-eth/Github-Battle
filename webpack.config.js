@@ -13,7 +13,7 @@ module.exports = {
         use: 'babel-loader'
       },
       {
-        test: /\.(png|jpg)$/,
+        test: /\.(png|jpg|ico)$/,
         use: [
           {
             loader: 'file-loader',
